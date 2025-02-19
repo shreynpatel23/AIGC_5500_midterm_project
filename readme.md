@@ -1,4 +1,3 @@
-````markdown
 # Hyperparameter Tuning for Optimizers on KMNIST
 
 This project tunes hyperparameters for different optimizers (Adam, AdamW, and RMSprop) on the KMNIST dataset using PyTorch. It uses K-Fold cross-validation to find the best hyperparameters.
@@ -10,7 +9,6 @@ This project tunes hyperparameters for different optimizers (Adam, AdamW, and RM
    git clone https://github.com/shreynpatel23/AIGC_5500_midterm_project.git
    cd AIGC_5500_midterm_project
    ```
-````
 
 2. Create a virtual environment (optional):
 

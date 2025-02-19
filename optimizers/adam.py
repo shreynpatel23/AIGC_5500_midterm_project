@@ -133,17 +133,11 @@ def train_adam(model, trainset, kf, hyperparams, batch_size):
                 print(f"Epoch {epoch+1}: Train Loss={avg_train_loss:.4f}, Train Acc={avg_train_acc:.2f}%, "
                       f"Test Loss={avg_test_loss:.4f}, Test Acc={avg_test_acc:.2f}%, Time={time_taken:.2f}s")
         
-        # print(f"fold_accs: {fold_accs}")
         avg_fold_acc = sum(fold_accs) / len(fold_accs)
-        # print(f"Average Fold Accuracy: {avg_fold_acc:.2f}%")
         # Store the best performing hyperparameters
         if avg_fold_acc > best_acc:
-            # print(f"previous best accuracy {best_acc:.2f}%")
-            # print(f"previous best parameters: {best_params}")
             best_acc = avg_fold_acc
             best_params = {'learning_rate': lr, 'betas': beta, 'weight_decay': decay}
-            # print(f"new best validation Accuracy: {best_acc:.2f}%")
-            # print(f"new best parameters: {best_params}")
             
         # Save results for this hyperparameter combination
         results.append({
